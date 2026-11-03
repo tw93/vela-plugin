@@ -1,0 +1,14 @@
+{
+  "name": "vela",
+  "owner": {
+    "name": "Vela"
+  },
+  "plugins": [
+    {
+      "name": "vela",
+      "source": "./",
+      "description": "Vela community-growth workflows for Claude Code",
+      "version": "0.0.0"
+    }
+  ]
+}

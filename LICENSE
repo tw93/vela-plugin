@@ -1,0 +1,31 @@
+Vela Plugin License
+
+Copyright (c) 2026 Faberon Technology Limited. All rights reserved.
+
+This repository contains the Vela plugin: the remote MCP configuration and the skill files (the "Plugin").
+
+You may download, install and use the Plugin, and copy its files into your own agent configuration, only for using Vela with your Vela account. You may modify your own copies for that purpose.
+
+Apart from that, you may not copy, redistribute, sublicense, sell or publish the Plugin or any part of it, whether modified or not.
+
+All rights not expressly granted here are reserved. If you breach this license, your permission ends and you must delete your copies.
+
+The Plugin is provided "as is", without warranty of any kind. Your use of the Vela service is governed by the Vela Terms of Service at https://vela.how/terms.
+
+---
+
+以下中文译文仅供参考，与英文不一致时以英文为准。
+
+Vela 插件许可
+
+版权所有 (c) 2026 造物者科技有限公司，保留所有权利。
+
+本仓库是 Vela 插件，包括远程 MCP 配置和 skill 文件（下称「本插件」）。
+
+你可以下载、安装和使用本插件，也可以把其中的文件拷进你自己的 agent 配置，但只能用于凭你的 Vela 账户使用 Vela，为此你可以修改自己的副本。
+
+除此之外，你不得复制、再分发、转授权、出售或公开发布本插件或其任何部分，无论是否修改过。
+
+本许可未明确授予的权利均予保留。违反本许可的，你的使用许可随即终止，须删除所有副本。
+
+本插件按现状提供，不作任何保证。Vela 服务的使用受 https://vela.how/terms 上的 Vela 服务条款约束。

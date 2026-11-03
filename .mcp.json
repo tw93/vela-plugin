@@ -1,0 +1,5 @@
+{
+  "mcpServers": {
+    "vela": { "type": "http", "url": "https://vela.how/mcp" }
+  }
+}
