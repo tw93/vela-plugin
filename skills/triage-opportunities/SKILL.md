@@ -13,7 +13,7 @@ If a tool reports that project_id is missing, follow its fix: call `list_project
 ## Tool sequence
 
 1. `list_opportunities` — list only opportunities with status new, with response_format detailed: each item then carries its tagging basis in triage_evidence (the tagging rule, every matched term with where it matched, and the discovery query) and up to three matched terms in matched_terms, plus suggested_action, the next step Vela suggests from the tag and status. Call `get_project` once for the project's category keywords, pain-point keywords and competitors, and use both to explain in the conversation why each opportunity is in the opportunity radar.
-2. `update_tag` — correct the tag when the automatic tag does not fit the post; you may pass reason with it.
+2. `update_tag` — correct the tag when the automatic tag does not fit the post; you may pass reason with it. Not for opportunities with platform youtube (see Hard rules).
 3. `update_status` — set the status to skip for opportunities that need no reply; you may pass reason with it. When matched_terms is an empty list (no category keyword, pain-point keyword or competitor matched), suggest skipping it and set skip only after the user agrees. This does not apply to awaiting_reply opportunities: they are new comments under a post the user registered.
 
 ## Hard rules
@@ -28,7 +28,11 @@ Change only tags and statuses here; do not draft replies in this skill.
 
 When you change a tag or skip an opportunity, you may pass reason: one short sentence in your own words (up to 200 characters). Never paste post or comment text into it; the rest of your explanation stays in this conversation.
 
-When triage_evidence is null, the opportunity was found before Vela recorded a tagging basis: say so instead of guessing why it was tagged.
+When triage_evidence is null, the opportunity was found before Vela recorded a tagging basis, or it came from YouTube search, which Vela does not tag under the YouTube API Services policy: say so instead of guessing why it was tagged.
+
+For an opportunity with platform youtube (YouTube search results and awaiting replies), never change its tag and never pass reason for it: under the YouTube API Services policy only the user tags these in the Vela web app. List them for the user and ask them to tag them in the Vela web app at /app/opportunities; skip one only after the user agrees, without reason.
+
+Items with platform youtube come from YouTube: when you show them, name YouTube as the source and link the item's url. Their title, snippet, author, posted time and counts are YouTube data; every other field is Vela's own and not from YouTube, so say so when you show them together.
 
 An awaiting reply that only provokes the user or baits them into replying can go unanswered: point it out, suggest skipping it, and set skip only after the user agrees.
 
